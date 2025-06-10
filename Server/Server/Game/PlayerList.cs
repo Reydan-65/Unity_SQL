@@ -7,6 +7,19 @@ namespace Server
     {
         private List<Player> players = new List<Player>();
 
+        public int Count => players.Count;
+
+        public Player this[int index]
+        {
+            get => players[index];
+            //set => players[index] = value;
+        }
+
+        public void AddPlayers(List<Player> players)
+        {
+            this.players.AddRange(players);
+        }
+
         public void AddNewPlayer(PlayerInfo playerInfo)
         { 
             if (ExistPlayer(playerInfo) == false)

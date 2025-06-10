@@ -10,5 +10,11 @@
             Info = info;
             Stats = new PlayerStats(10, 1);
         }
+
+        public Player(PlayerInfo info, PlayerStats stats)
+        {
+            Info = info;
+            Stats = stats;
+        }
     }
 }

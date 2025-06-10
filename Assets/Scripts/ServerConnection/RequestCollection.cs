@@ -16,7 +16,7 @@ public class RequestCollection : MonoBehaviour
 
     public async Task<PlayerStats> UpgradeLevel(PlayerStats playerStats)
     {
-        string responseMessage = await connection.RequestAsync("/playerStats", "POST", "UpgradeLevel");
+        string responseMessage = await connection.RequestAsync("/playerStats", "POST", $"Mine upgraded to Level: {playerStats.Level}");
         
         PlayerStats stats = GetPlayerStats(playerStats, responseMessage);
 
