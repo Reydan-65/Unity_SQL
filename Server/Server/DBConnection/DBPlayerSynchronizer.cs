@@ -22,10 +22,10 @@ namespace Server
             {
                 for (int i = 0; i < playerList.Count;  i++)
                 {
-                    collection.SetPlayerStats(playerList[i]); // PlayerList проиндексирован (стр. 12)
+                    collection.SetPlayerStats(playerList[i]); // PlayerList проиндексирован (стр. 14)
                 }
 
-                Console.WriteLine("Player stats synchronized with the database");
+                DebugViewer.WriteLine("Player stats synchronized with the database", ConsoleColor.DarkGray);
 
                 Thread.Sleep(timeOut);
             }

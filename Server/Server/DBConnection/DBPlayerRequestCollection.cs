@@ -44,11 +44,14 @@ namespace Server
             PlayerInfo[] info = GetAllPlayerInfo();
             PlayerStats[] stats = GetAllPlayerStats();
 
+            DebugViewer.WriteLine($"{"Login",-15} {"Password Hash",-64}", ConsoleColor.DarkCyan);
+
             for (int i = 0; i < info.Length; i++)
             {
                 allPlayers.Add(new Player(info[i], stats[i]));
-                Console.WriteLine(info[i].Name + " " + info[i].PasswordHash);
+                DebugViewer.WriteLine($"{info[i].Name,-15} {info[i].PasswordHash,-64}", ConsoleColor.DarkGreen);
             }
+            Console.WriteLine();
 
             return allPlayers;
         }
@@ -93,6 +96,26 @@ namespace Server
             }
 
             return stats.ToArray();
+        }
+
+        public bool CreatePlayer(PlayerInfo info)
+        {
+            try
+            {
+                string commandText = $@"INSERT INTO player_info (name, password_hash)
+                                        VALUES ('{info.Name}', '{info.PasswordHash}');
+                                        INSERT INTO player_stats (player_id, gold, level)
+                                        VALUES (last_insert_rowid(), 0, 1);";
+
+                connection.ExecuteCommand(commandText);
+                return true;
+            }
+            catch (SQLiteException e)
+            {
+                DebugViewer.Write("ABORT: ", ConsoleColor.Red);
+                DebugViewer.WriteLine(e.Message, ConsoleColor.DarkRed);
+                return false;
+            }
         }
     }
 }
