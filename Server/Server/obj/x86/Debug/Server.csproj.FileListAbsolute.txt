@@ -1,0 +1,13 @@
+C:\Study\Projects\Unity_SQL\Server\Server\bin\x86\Debug\database.db
+C:\Study\Projects\Unity_SQL\Server\Server\bin\x86\Debug\Server.exe.config
+C:\Study\Projects\Unity_SQL\Server\Server\bin\x86\Debug\Server.exe
+C:\Study\Projects\Unity_SQL\Server\Server\bin\x86\Debug\Server.pdb
+C:\Study\Projects\Unity_SQL\Server\Server\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Study\Projects\Unity_SQL\Server\Server\bin\x86\Debug\System.Data.SQLite.dll
+C:\Study\Projects\Unity_SQL\Server\Server\bin\x86\Debug\Newtonsoft.Json.pdb
+C:\Study\Projects\Unity_SQL\Server\Server\bin\x86\Debug\Newtonsoft.Json.xml
+C:\Study\Projects\Unity_SQL\Server\Server\obj\x86\Debug\Server.csproj.AssemblyReference.cache
+C:\Study\Projects\Unity_SQL\Server\Server\obj\x86\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Study\Projects\Unity_SQL\Server\Server\obj\x86\Debug\Server.csproj.Up2Date
+C:\Study\Projects\Unity_SQL\Server\Server\obj\x86\Debug\Server.exe
+C:\Study\Projects\Unity_SQL\Server\Server\obj\x86\Debug\Server.pdb
